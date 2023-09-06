@@ -36,7 +36,7 @@ public class User {
     public static boolean validateRegistInfo(String name, String email, String pass, String cfmPass){
         if(name.length() < 5) {
             return false;
-        }else if(!email.contains("@") && !email.endsWith(".com")){
+        }else if(!email.contains("@") || !email.endsWith(".com")){
             return false;
         }else if(!pass.equals(cfmPass)){
             return false;
