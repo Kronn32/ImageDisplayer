@@ -4,30 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".RegisterActivity">
+
     <TextView
-        android:id="@+id/loginTitleTxt"
+        android:id="@+id/registerTitleTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="75dp"
-        app:layout_constraintBottom_toTopOf="@id/emailLogin"
-        android:text="ImageDisplayer"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@id/nameInputReg"
+        android:text="Make your account"
         android:textSize="35sp"/>
 
     <EditText
-        android:id="@+id/emailLogin"
+        android:id="@+id/nameInputReg"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/passwordLogin"
+        app:layout_constraintBottom_toTopOf="@id/emailInputReg"
+        android:hint="Name"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/emailInputReg"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/passwordInputReg"
         android:hint="Email"
         android:textSize="20sp"/>
 
     <EditText
-        android:id="@+id/passwordLogin"
+        android:id="@+id/passwordInputReg"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,27 +47,37 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:hint="Password"
         android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/cfmpasswrodInputReg"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordInputReg"
+        android:hint="Confirm Password"
+        android:textSize="20sp"/>
+
     <Button
-        android:id="@+id/loginBtn"
+        android:id="@+id/registerBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/passwordLogin"
+        app:layout_constraintTop_toBottomOf="@id/cfmpasswrodInputReg"
         android:layout_marginTop="50dp"
-        android:backgroundTint="@color/blue"
-        android:text="Log in"/>
+        android:text="Register"
+        android:backgroundTint="@color/blue"/>
 
     <TextView
-        android:id="@+id/toRegisterTxt"
+        android:id="@+id/toLoginTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/loginBtn"
-        android:text="Don't have an account? Register here"
-        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/registerBtn"
+        android:text="Already have an account?"
         android:textColor="@color/blue"
+        android:textSize="15sp"
         android:clickable="true"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
